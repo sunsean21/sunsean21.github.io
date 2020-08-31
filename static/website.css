@@ -2,7 +2,7 @@
 
 /* Global settings */
 .site-title { /* header */
-    font-family: 'Monaco', 'Inconsolata', 'Andale Mono', 'Lucida Console', 'Bitstream Vera Sans Mono', 'Courier New', Courier, Monospace;
+    font-family: "Times New Roman", Times, serif;
 }
 
 .footer-only { /* footer */
