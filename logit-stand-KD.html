@@ -177,14 +177,14 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="resources/cvpr2024_cover.jpg" alt="MY ALT TEXT" width="400"/>
+        <img src="resources/cvpr2024_cover.jpg" alt="MY ALT TEXT" width="400" align="middle"/>
         <h2 class="subtitle has-text-centered">
           Figure 1. Vanilla knowledge distillation implicitly enforces an exact match between the magnitudes of teacher and student logits. It is an unnecessary side-effect because it is found sufficient to preserve the innate relations between their logits. Given the capacity gap between them, it is also challenging for a lightweight student to produce logits with the same magnitude as a cumbersome teacher. In contrast, the proposed Z-score logit standardization pre-process mitigates the side-effect. The standardized student logits have arbitrary magnitude suitable for the student’s capacity while preserving the essential relations learned from the teacher.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="resources/figures/toy_plot.png" alt="MY ALT TEXT"/>
+        <img src="resources/figures/toy_plot.png" alt="MY ALT TEXT" width="400" align="middle" />
         <h2 class="subtitle has-text-centered">
           Figure 2. A toy case where two students, S1 and S2, learning from the same teacher with an identical temperature (assumed 1 for simplicity). Student S1 generates the logits much closer to the teacher’s in terms of magnitude and thus has lower loss of 0.1749, but it returns a wrong prediction of “bird”. In contrast, Student S2 outputs the logits far from the teacher’s and yields greater loss value of 0.3457, but it returns the correct prediction of “dog”. After the proposed logit standardization, the issue is addressed.
         </h2>
