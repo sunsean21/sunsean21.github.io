@@ -52,32 +52,41 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Logit Standardization in Knowledge Distillation</h1>
+            <h1 class="title is-2 publication-title">Logit Standardization in Knowledge Distillation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Shangquan Sun</a>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Wenqi Ren</a>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Jingzhi Li</a>,</span>
-                <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Rui Wang</a>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xiaochun Cao</a>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">UCAS, CAS, SYSU<br>CVPR 2024 Highlight</span>
-                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
-                  </div>
+                <a href="https://sunsean21.github.io/" target="_blank">Shangquan Sun</a><sup>1,2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://rwenqi.github.io/" target="_blank">Wenqi Ren</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://ieeexplore.ieee.org/author/37088854420" target="_blank">Jingzhi Li</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=6zB7whQAAAAJ" target="_blank">Rui Wang</a><sup>1,2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scst.sysu.edu.cn/members/caoxiaochun.htm" target="_blank">Xiaochun Cao</a><sup>3</sup>
+              </span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                CAS<sup>1</sup>, UCAS<sup>2</sup>, SYSU<sup>3</sup>
+              </span>
+              <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+              <br>
+              <span class="is-size-5 publication-awards">
+                CVPR 2024 Highlight (Top 2.8%)
+              </span>
+            </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="/resources/pdf/2024082401.pdf" target="_blank"
+                        <a href="https://sunsean21.github.io/resources/pdf/2024082401.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -88,7 +97,8 @@
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
-                      <a href="/resources/cvpr2024_supp.pdf" target="_blank">
+                      <a href="https://sunsean21.github.io/resources/cvpr2024_supp.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
                       </span>
@@ -167,32 +177,18 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="resources/cvpr2024_cover.jpg" alt="MY ALT TEXT" width="400"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Figure 1. Vanilla knowledge distillation implicitly enforces an exact match between the magnitudes of teacher and student logits. It is an unnecessary side-effect because it is found sufficient to preserve the innate relations between their logits. Given the capacity gap between them, it is also challenging for a lightweight student to produce logits with the same magnitude as a cumbersome teacher. In contrast, the proposed Z-score logit standardization pre-process mitigates the side-effect. The standardized student logits have arbitrary magnitude suitable for the student’s capacity while preserving the essential relations learned from the teacher.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="resources/figures/toy_plot.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Figure 2. A toy case where two students, S1 and S2, learning from the same teacher with an identical temperature (assumed 1 for simplicity). Student S1 generates the logits much closer to the teacher’s in terms of magnitude and thus has lower loss of 0.1749, but it returns a wrong prediction of “bird”. In contrast, Student S2 outputs the logits far from the teacher’s and yields greater loss value of 0.3457, but it returns the correct prediction of “dog”. After the proposed logit standardization, the issue is addressed.
         </h2>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
   </div>
 </div>
 </div>
@@ -262,7 +258,7 @@
     <div class="container">
       <h2 class="title">Poster</h2>
 
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+      <iframe  src="resources/pdf/poster_cvpr24_logitKD.pdf" width="100%" height="550">
           </iframe>
         
       </div>
@@ -275,9 +271,23 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
-    </div>
-</section>
+      <pre><code>
+@inproceedings{Sun2024Logit,
+    title={Logit Standardization in Knowledge Distillation},
+    author={Sun, Shangquan and Ren, Wenqi and Li, Jingzhi and Wang, Rui and Cao, Xiaochun},
+    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    year={2024}
+}
+
+@article{sun2024logit,
+  title={Logit Standardization in Knowledge Distillation},
+  author={Sun, Shangquan and Ren, Wenqi and Li, Jingzhi and Wang, Rui and Cao, Xiaochun},
+  journal={arXiv preprint arXiv:2403.01427},
+  year={2024}
+}
+  </code></pre>
+      </div>
+  </section>
 <!--End BibTex citation -->
 
 
