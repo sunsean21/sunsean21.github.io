@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Logit Standardization in Knowledge Distillation</title>
+  <title>Restoring Images in Adverse Weather Conditions via Histogram Transformer</title>
   <link rel="icon" type="image/x-icon" href="/resources/sun-logo.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,17 +52,17 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-2 publication-title">Logit Standardization in Knowledge Distillation</h1>
+            <h1 class="title is-2 publication-title">Restoring Images in Adverse Weather Conditions via Histogram Transformer</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
                 <a href="https://sunsean21.github.io/" target="_blank">Shangquan Sun</a><sup>1,2</sup>,
               </span>
               <span class="author-block">
-                <a href="https://rwenqi.github.io/" target="_blank">Wenqi Ren</a><sup>3</sup>,
+                <a href="https://rwenqi.github.io/" target="_blank">Wenqi Ren</a><sup>3,4</sup>,
               </span>
               <span class="author-block">
-                <a href="https://ieeexplore.ieee.org/author/37088854420" target="_blank">Jingzhi Li</a><sup>1</sup>,
+                <a href="https://ieeexplore.ieee.org/author/37065165200" target="_blank">Xinwei Gao</a><sup>5</sup>,
               </span>
               <span class="author-block">
                 <a href="https://scholar.google.com/citations?user=6zB7whQAAAAJ" target="_blank">Rui Wang</a><sup>1,2</sup>,
@@ -73,12 +73,12 @@
             </div>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                CAS<sup>1</sup>, UCAS<sup>2</sup>, SYSU<sup>3</sup>
+                CAS<sup>1</sup>, UCAS<sup>2</sup>, SYSU Shenzhen<sup>3</sup>, SYSU Guangzhou<sup>4</sup>, Tencent<sup>5</sup>
               </span>
               <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
               <br>
               <span class="is-size-5 publication-awards">
-                CVPR 2024 Highlight (Top 2.8%)
+                ECCV 2024
               </span>
             </div>
 
@@ -86,7 +86,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://sunsean21.github.io/resources/pdf/2024082401.pdf" target="_blank"
+                        <a href="https://arxiv.org/abs/2407.10172" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -97,7 +97,7 @@
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
-                      <a href="https://sunsean21.github.io/resources/cvpr2024_supp.pdf" target="_blank"
+                      <a href="https://sunsean21.github.io/resources/pdf/eccv2024_supp.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
@@ -108,7 +108,7 @@
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/sunshangquan/logit-standardization-KD" target="_blank"
+                    <a href="https://github.com/sunshangquan/Histoformer" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -119,7 +119,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/2403.01427" target="_blank"
+                  <a href="https://arxiv.org/abs/2407.10172" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -130,7 +130,7 @@
 
                 <!-- poster Link -->
                 <span class="link-block">
-                  <a href="https://sunsean21.github.io/resources/pdf/poster_cvpr24_logitKD.pdf" target="_blank"
+                  <a href="https://sunsean21.github.io/resources/pdf/poster_eccv24_histoformer.pdf" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fa fa-newspaper"></i>
@@ -171,7 +171,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Knowledge distillation involves transferring soft labels from a teacher to a student using a shared temperature-based softmax function. However, the assumption of a shared temperature between teacher and student implies a mandatory exact match between their logits in terms of logit range and variance. This side-effect limits the performance of student, considering the capacity discrepancy between them and the finding that the innate logit relations of teacher are sufficient for student to learn. To address this issue, we propose setting the temperature as the weighted standard deviation of logit and performing a plug-and-play Z-score pre-process of logit standardization before applying softmax and Kullback-Leibler divergence. Our pre-process enables student to focus on essential logit relations from teacher rather than requiring a magnitude match, and can improve the performance of existing logit-based distillation methods. We also show a typical case where the conventional setting of sharing temperature between teacher and student cannot reliably yield the authentic distillation evaluation; nonetheless, this challenge is successfully alleviated by our Z-score. We extensively evaluate our method for various student and teacher models on CIFAR-100 and ImageNet, showing its significant superiority. The vanilla knowledge distillation powered by our pre-process can achieve favorable performance against state-of-the-art methods, and other distillation variants can obtain considerable gain with the assistance of our pre-process.
+            Transformer-based image restoration methods in adverse weather have achieved significant progress. Most of them use self-attention along the channel dimension or within spatially fixed-range blocks to reduce computational load. However, such a compromise results in limitations in capturing long-range spatial features. Inspired by the observation that the weather-induced degradation factors mainly cause similar occlusion and brightness, in this work, we propose an efficient Histogram Transformer (Histoformer) for restoring images affected by adverse weather. It is powered by a mechanism dubbed histogram selfattention, which sorts and segments spatial features into intensity-based bins. Self-attention is then applied across bins or within each bin to selectively focus on spatial features of dynamic range and process similar degraded pixels of the long range together. To boost histogram selfattention, we present a dynamic-range convolution enabling conventional convolution to conduct operation over similar pixels rather than neighbor pixels. We also observe that the common pixel-wise losses neglect linear association and correlation between output and ground-truth. Thus, we propose to leverage the Pearson correlation coefficient as a loss function to enforce the recovered pixels following the identical order as groundtruth. Extensive experiments demonstrate the efficacy and superiority of our proposed method. We have released the codes in Github.
           </p>
         </div>
       </div>
@@ -189,23 +189,16 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="resources/cvpr2024_cover.jpg" alt="MY ALT TEXT" width="400" vertical-align="middle" align="middle"/>
+        <img src="resources/eccv2024_cover.jpg" alt="MY ALT TEXT" width="400" vertical-align="middle" align="middle"/>
         <h2 class="subtitle has-text-centered">
-          Figure 1. Vanilla knowledge distillation implicitly enforces an exact match between the magnitudes of teacher and student logits. It is an unnecessary side-effect because it is found sufficient to preserve the innate relations between their logits. Given the capacity gap between them, it is also challenging for a lightweight student to produce logits with the same magnitude as a cumbersome teacher. In contrast, the proposed Z-score logit standardization pre-process mitigates the side-effect. The standardized student logits have arbitrary magnitude suitable for the student’s capacity while preserving the essential relations learned from the teacher.
+          Figure 1. Given weather-degraded images in (a), traditional transformers perform selfattention either along the channel dimension or within a fixed-range block as shown in (b). In contrast, we observe that weather-induced degradation patterns tend to be similar but distinct from the background. So we categorize pixels affected by adverse weather and background pixels into distinct bins based on descending intensities (as depicted in (c)) and then conducts self-attention within and between bins.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="resources/figures/cvpr2024/algorithm.jpg" alt="MY ALT TEXT" width="400" vertical-align="middle" align="middle" />
+        <img src="resources/figures/eccv2024/histoformer.png" alt="MY ALT TEXT" width="400" vertical-align="middle" align="middle" />
         <h2 class="subtitle has-text-centered">
-          Algorithm 1 & 2. The algorithm of the proposed logit standardization.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="resources/figures/cvpr2024/toy_plot.jpg" alt="MY ALT TEXT" width="400" vertical-align="middle" align="middle" />
-        <h2 class="subtitle has-text-centered">
-          Figure 2. A toy case where two students, S1 and S2, learning from the same teacher with an identical temperature (assumed 1 for simplicity). Student S1 generates the logits much closer to the teacher’s in terms of magnitude and thus has lower loss of 0.1749, but it returns a wrong prediction of “bird”. In contrast, Student S2 outputs the logits far from the teacher’s and yields greater loss value of 0.3457, but it returns the correct prediction of “dog”. After the proposed logit standardization, the issue is addressed.
+          Figure 2. The overall architecture of our Histoformer for weather removal. The main component is the Histogram Transformer block, and it comprises the Dynamic-range Histogram Self-Attention (DHSA) module and the Dual-scale Gated Feed-Forward (DGFF) module. Within DHSA, we present two types of reshaping mechanism, i.e., Bin-wise Histogram Reshaping and Frequency-wise Histogram Reshaping.
         </h2>
       </div>
   </div>
@@ -222,23 +215,11 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="resources/figures/cvpr2024/result_cifar_diff.jpg" alt="MY ALT TEXT" width="800" vertical-align="middle" align="middle"/>
+        <img src="resources/figures/eccv2024/result.jpg" alt="MY ALT TEXT" width="800" vertical-align="middle" align="middle"/>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="resources/figures/cvpr2024/result_cifar_same.jpg" alt="MY ALT TEXT" width="800" vertical-align="middle" align="middle" />
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="resources/figures/cvpr2024/result_imagenet.jpg" alt="MY ALT TEXT" width="400" vertical-align="middle" align="middle" />
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="resources/figures/cvpr2024/result_ablation.jpg" alt="MY ALT TEXT" width="400" vertical-align="middle" align="middle" />
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="resources/figures/cvpr2024/result_gap.jpg" alt="MY ALT TEXT" width="400" vertical-align="middle" align="middle" />
+        <img src="resources/figures/eccv2024/result_ablation.jpg" alt="MY ALT TEXT" width="800" vertical-align="middle" align="middle" />
       </div>
   </div>
 </div>
@@ -251,19 +232,15 @@
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3" align="middle">Visualization</h2>
+      <h2 class="title is-3" align="middle">Visual Results</h2>
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="resources/figures/cvpr2024/vis_1.jpg" alt="MY ALT TEXT" width="400" vertical-align="middle" align="middle"/>
+        <img src="resources/figures/eccv2024/result1.jpg" alt="MY ALT TEXT" width="400" vertical-align="middle" align="middle"/>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="resources/figures/cvpr2024/vis_2.jpg" alt="MY ALT TEXT" width="1000" vertical-align="middle" align="middle" />
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="resources/figures/cvpr2024/vis_3.jpg" alt="MY ALT TEXT" width="400" vertical-align="middle" align="middle" />
+        <img src="resources/figures/eccv2024/result2.jpg" alt="MY ALT TEXT" width="1000" vertical-align="middle" align="middle" />
       </div>
   </div>
 </div>
@@ -331,7 +308,7 @@
     <div class="container">
       <h2 class="title">Poster</h2>
 
-      <iframe  src="resources/pdf/poster_cvpr24_logitKD.pdf" width="100%" height="550">
+      <iframe  src="resources/pdf/poster_eccv24_logitKD.pdf" width="100%" height="550">
           </iframe>
         
       </div>
@@ -345,19 +322,15 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
-@inproceedings{Sun2024Logit,
-    title={Logit Standardization in Knowledge Distillation},
-    author={Sun, Shangquan and Ren, Wenqi and Li, Jingzhi and Wang, Rui and Cao, Xiaochun},
-    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    year={2024}
+@misc{sun2024restoring,
+title={Restoring Images in Adverse Weather Conditions via Histogram Transformer},
+author={Shangquan Sun and Wenqi Ren and Xinwei Gao and Rui Wang and Xiaochun Cao},
+year={2024},
+eprint={2407.10172},
+archivePrefix={arXiv},
+primaryClass={cs.CV}
 }
 
-@article{sun2024logit,
-  title={Logit Standardization in Knowledge Distillation},
-  author={Sun, Shangquan and Ren, Wenqi and Li, Jingzhi and Wang, Rui and Cao, Xiaochun},
-  journal={arXiv preprint arXiv:2403.01427},
-  year={2024}
-}
   </code></pre>
       </div>
   </section>
