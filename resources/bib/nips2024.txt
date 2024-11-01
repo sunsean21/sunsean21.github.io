@@ -1,0 +1,9 @@
+@misc{sun2024ensirensemblealgorithmimage,
+      title={EnsIR: An Ensemble Algorithm for Image Restoration via Gaussian Mixture Models}, 
+      author={Shangquan Sun and Wenqi Ren and Zikun Liu and Hyunhee Park and Rui Wang and Xiaochun Cao},
+      year={2024},
+      eprint={2410.22959},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2410.22959}, 
+}
