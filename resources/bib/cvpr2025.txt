@@ -1,0 +1,7 @@
+@inproceedings{sun2025semi,
+  title={Semi-Supervised State-Space Model with Dynamic Stacking Filter for Real-World Video Deraining},
+  author={Sun, Shangquan and Ren, Wenqi and Zhou, Juxiang and Wang, Shu and Gan, Jianhou and Cao, Xiaochun},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={26114--26124},
+  year={2025}
+}
